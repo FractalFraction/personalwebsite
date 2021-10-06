@@ -1,7 +1,7 @@
 import styles from './layout.module.css'
 import Image from 'next/image'
-import gitHubLogo from '../public/images/GitHub-Mark/PNG/GitHub-Mark-64px.png'
-import linkedInLogo from '../public/images/LinkedIn-Logos/In/Digital/Blue/1x/In-Blue-34.png'
+import gitHubLogo from '../public/images/GitHub-Mark-64px.png'
+import linkedInLogo from '../public/images/In-Blue-34.png'
 
 export default function Footer(){
   return (

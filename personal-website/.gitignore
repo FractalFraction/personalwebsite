@@ -32,3 +32,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# image repo folders
+/public/images/GitHub-Mark
+/public/images/LinkedIn-Logos
