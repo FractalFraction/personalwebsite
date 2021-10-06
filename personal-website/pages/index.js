@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../components/layout'
 import styles from '../styles/Home.module.css'
+import selfie from '/public/images/selfie.png'
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
         </p>
         <div>
         <Image 
-          src="/images/selfie.png" 
+          src={selfie}
           alt="profile picture"
           width={480}
           height={480}
