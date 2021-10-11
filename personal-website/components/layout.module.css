@@ -1,6 +1,10 @@
+
 .container {
-  background-color: rgb(67, 201, 235)
+  background-color: rgb(67, 201, 235);
+  width: 100%;
+  max-width: 1720px;
 }
+
 
 .container__ul{
   list-style-type: none;
@@ -15,6 +19,46 @@
   padding: 0.5rem 1rem;
   color: rgb(38, 40, 63);
   justify-content: center;
+  width: 100%;
+}
+
+.grid {
+  position:relative;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding: 0rem;
+  margin: 0rem;
+  min-height:100%;
+  position:relative;
+}
+
+.grid__navbar {
+  align-self: center;
+  margin: 0rem 0rem;
+  padding: 0rem 0rem;
+  flex-basis: content;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.grid__footer {
+  width:100%; 
+  align-self: center;
+  margin-top: auto;
+  padding: 0rem 0rem;
+  flex-basis: content;
+  flex-shrink: 0;
+}
+
+.grid__main {
+  align-self: center;
+  margin: 2rem 0rem;
+  padding: 0rem 0rem;
+  flex-basis: content;
+  flex-shrink: 2;
 }
 
 
