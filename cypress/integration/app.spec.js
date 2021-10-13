@@ -43,33 +43,24 @@ describe('Navigation', () => {
   context('Mobile', () => {
 
     beforeEach(() => {
-      cy.viewport(sizes.phone)
+      cy.viewport(...sizes.desktop)
       cy.visit('/')
+      cy.viewport(sizes.phone)
     })
   
     it('displays hamburger menu', ()=> {
       // hamburger menu may be anchor link/button not an img?
       cy.get('nav>div').children().each(($el) => expect($el).to.be.visible)
-  
-      //links.forEach(link => cy.get(`a[href*=${link}]`).should('not.be.visible'))
-  
-      cy.get('a[href*="home"]').should('not.be.visible')
-      cy.get('a[href*="cv"]').should('not.be.visible')
-      cy.get('a[href*="contact"]').should('not.be.visible')
-      cy.get('nav').children().should('contain', 'img[alt="hamburger"]')
-      cy.get('img[alt="hamburger"]').click()
+
+      cy.get('[data-test-id="hamburger"]').click()
       cy.get('a[href*="home"]').should('be.visible')
       cy.get('a[href*="cv"]').should('be.visible')
       cy.get('a[href*="contact"]').should('be.visible')
     })
   
     it('functional links on hamburger menu' ,() => {
-      cy.get('img[alt="hamburger"]').click()
-      cy.get('a[href*="cv"').click()
-      cy.url().should('include','/cv')
-      cy.get('p').contains('CV')
-      cy.get('img[alt="hamburger"]').click()
-      cy.get('a[href*="cv"').click()
+      cy.get('button[id="hamburger"]').click()
+      cy.get('a[href*="cv"]').click()
       cy.url().should('include','/cv')
       cy.get('p').contains('CV')
     })

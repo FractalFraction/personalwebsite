@@ -14,12 +14,14 @@ export default function ResponsiveNavbar(){
 
   let size = useWindowDimensions() 
 
+  console.log("Renders the Responsive Navbar")
+
   return (
     <>  
       {(size.width <= 700) 
         ? <nav className={styles.navbar}>  
           <div className={styles.div}>     
-            <button className={styles.btn} onClick={() => setIsOn(!isOn)}>  <i className="fa fa-bars fa-2x"></i></button>
+            <button data-test-id="hamburger" className={styles.btn} onClick={() => setIsOn(!isOn)}>  <i className="fa fa-bars fa-2x"></i></button>
           </div>
            {(isOn) ? <NavbarLinks className={styles.navlinks__mobile}/> : null}
           </nav>
