@@ -13,8 +13,8 @@ export default function Footer(){
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className={styles.container}>
-           <ul className={styles.container__ul}>
+          <div>
+           <ul>
               <li>
                 <Image 
                   src={gitHubLogo} alt="Github logo" 
@@ -34,8 +34,8 @@ export default function Footer(){
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className={styles.container}>
-           <ul className={styles.container__ul}>
+          <div>
+           <ul>
             <li>
               <Image 
                 src={linkedInLogo} alt="LinkedIn logo" 
